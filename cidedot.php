@@ -104,7 +104,7 @@ function check_key($allowed) {
 
 add_filter( 'check_key', 'check_key', 10, 1 );
 
-if( function_exists('acf_add_local_field_group') ):
+/*if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array(
         'key' => 'group_5f16c5f22af60',
@@ -409,6 +409,6 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => '',
     ));
     
-endif;
+endif; */
 
 ?>
