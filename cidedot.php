@@ -39,6 +39,17 @@ function cidedot_cv() {
                                 <?php if( get_sub_field('title') ) { ?>
                                     <p><strong><?php the_sub_field('title', false); ?></strong><br />
                                 <?php } ?>
+                                <?php if( get_sub_field('sub_title') ) { ?>
+                                    <?php if( !get_sub_field('title') ) { ?>
+                                        <p>
+                                    <?php } else { ?>
+                                        <br/>
+                                    <?php } ?>
+                                    <?php the_sub_field('sub_title', false); ?></strong><br />
+                                <?php } ?>
+                                <?php if( get_sub_field('title') || get_sub_field('sub_title') ) { ?>
+                                    </p> 
+                                <?php } ?>
                                 <?php if( get_sub_field('description') ) { ?>
                                     <?php the_sub_field('description'); ?></p>
                                 <?php } ?>
