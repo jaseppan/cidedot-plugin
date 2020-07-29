@@ -37,7 +37,7 @@ function cidedot_cv() {
                         <?php while( have_rows('category-content') ) : the_row(); ?>
                             <?php if( in_array( 'all', get_sub_field('visible') )  || in_array( $allowed, get_sub_field('visible') ) ) { ?>
                                 <?php if( get_sub_field('title') ) { ?>
-                                    <p><strong><?php the_sub_field('title', false); ?></strong>
+                                    <p class="cv-item-title"><strong><?php the_sub_field('title', false); ?></strong>
                                 <?php } ?>
                                 <?php if( get_sub_field('sub_title') ) { ?>
                                     <?php if( !get_sub_field('title') ) { ?>
@@ -45,7 +45,7 @@ function cidedot_cv() {
                                     <?php } else { ?>
                                         <br/>
                                     <?php } ?>
-                                    <?php the_sub_field('sub_title', false); ?></strong><br />
+                                    <span class="cv-item-subtitle"><?php the_sub_field('sub_title', false); ?></span><br />
                                 <?php } ?>
                                 <?php if( get_sub_field('title') || get_sub_field('sub_title') ) { ?>
                                     </p> 
