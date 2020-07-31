@@ -23,10 +23,11 @@ function cidedot_cv() {
         return; 
 
     $allowed = false;
-    $allowed = apply_filters('check_key', $allowed);
-    $i = 0;
 
     ob_start();
+    
+    $allowed = apply_filters('check_key', $allowed);
+    $i = 0;
 
     ?>
     <div id="cv-content">
@@ -113,7 +114,11 @@ function check_key($allowed) {
             $allowed = $results[0]['option_value'];
             return $allowed;
         }
-    }
+    } else { ?>
+        <script>
+            alert('Et ole tunnistautunut. Nähdäksesi täydellisen CV:n käytä autorisoitua linkkiä. Voit pyytää linkin minulta sähköpostitse.');
+        </script>
+    <?php }
 
     if( current_user_can( 'administrator' ) ) {
         return 'all';
