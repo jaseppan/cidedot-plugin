@@ -24,6 +24,7 @@ function cidedot_cv() {
 
     $allowed = false;
     $allowed = apply_filters('check_key', $allowed);
+    $i = 0;
 
     ob_start();
 
@@ -31,20 +32,22 @@ function cidedot_cv() {
     <div id="cv-content">
         <?php if ( have_rows('cv') ) : ?>       
             <?php while( have_rows('cv') ) : the_row(); ?>
-                <?php if( in_array( 'all', get_sub_field('visible') ) || in_array( $allowed, get_sub_field('visible') ) ) { ?>
-                    <h2><?php the_sub_field('category', false); ?></h2>
-                    <?php if ( have_rows('category-content') ) : ?>                        
-                        <?php while( have_rows('category-content') ) : the_row(); ?>
-                            <?php if( in_array( 'all', get_sub_field('visible') )  || in_array( $allowed, get_sub_field('visible') ) ) { ?>
-                                <?php if( get_sub_field('title') ) { ?>
-                                    <p class="cv-item-title"><strong><?php the_sub_field('title', false); ?></strong>
+                <?php if( in_array( 'all', get_sub_field('visible') ) || in_array( $allowed, get_sub_field('visible') ) ) { 
+                    $title = get_sub_field('category', false);
+                    $title_id = sanitize_title($title) . '-' . $i; ?>
+
+                    <h2 id="<?php echo $title_id ?>"><?php echo $title ?></h2>
+                    <?php if ( have_rows('category-content') ) :            
+                        while( have_rows('category-content') ) : the_row();
+                            if( in_array( 'all', get_sub_field('visible') )  || in_array( $allowed, get_sub_field('visible') ) ) { ?>
+                                <?php if( get_sub_field('title') ) {
+                                    $title = get_sub_field('title', false);
+                                    $title_id = sanitize_title($title) . '-' . $i;?>
+                                    
+                                    <p id ="<?php echo $title_id ?>" class="cv-item-title"><strong><?php echo $title ?></strong>
                                 <?php } ?>
                                 <?php if( get_sub_field('sub_title') ) { ?>
-                                    <?php if( !get_sub_field('title') ) { ?>
-                                        <p>
-                                    <?php } else { ?>
-                                        <br/>
-                                    <?php } ?>
+                                    <?php echo (get_sub_field('title')) ? '<br />' : '<p>'; ?>
                                     <span class="cv-item-subtitle"><?php the_sub_field('sub_title', false); ?></span><br />
                                 <?php } ?>
                                 <?php if( get_sub_field('title') || get_sub_field('sub_title') ) { ?>
@@ -53,8 +56,9 @@ function cidedot_cv() {
                                 <?php if( get_sub_field('description') ) { ?>
                                     <?php the_sub_field('description'); ?></p>
                                 <?php } ?>
-                            <?php } ?>
-                        <?php endwhile; ?>  
+                            <?php }
+                            $i++;
+                        endwhile; ?>  
                     <?php endif; ?>
                 <?php } ?>
             <?php endwhile; ?>
