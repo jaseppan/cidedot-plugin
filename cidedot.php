@@ -75,7 +75,7 @@ function cidedot_cv() {
 
 add_shortcode( 'cidedot-cv', 'cidedot_cv' );
 
-// Filtering cv topics by id and key;
+// Filter cv topics by id and key;
 
 function check_key($allowed) {
     
@@ -113,7 +113,11 @@ function check_key($allowed) {
 
             $allowed = $results[0]['option_value'];
             return $allowed;
-        }
+        } else { ?>
+            <script>
+                alert('Tunnistautuminen ei onnistunut. Varmista että käytät oikeaa linkkiä. Ongelmatilanteessa voit ottaa yhteyttä sähköpostitse tai puhelimitse.');
+            </script>
+        <?php }
     } else { ?>
         <script>
             alert('Et ole tunnistautunut. Nähdäksesi täydellisen CV:n käytä autorisoitua linkkiä. Voit pyytää linkin minulta sähköpostitse.');
