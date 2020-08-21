@@ -8,6 +8,7 @@
  * Author URI: https:/cidedot.com/
  **/
 
+if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Add options page 
 if( function_exists('acf_add_options_page') ) {
@@ -89,11 +90,9 @@ function check_key($allowed) {
 
         /* Check key and id pair */
         $query = $wpdb->prepare(
-            "SELECT option_name FROM $wpdb->options
-            WHERE option_name = %s AND 
-            option_value = %s",
+            "SELECT option_name FROM $wpdb->options WHERE option_name = %s AND option_value = %s",
             $option_name,
-            $key,
+            $key
         );
 
         $results = $wpdb->get_results( $query, ARRAY_A );
@@ -106,7 +105,7 @@ function check_key($allowed) {
             $query = $wpdb->prepare(
                 "SELECT option_value FROM $wpdb->options
                 WHERE option_name = %s",
-                $option_name,
+                $option_name
             );
             
             $results = $wpdb->get_results( $query, ARRAY_A );
@@ -115,7 +114,7 @@ function check_key($allowed) {
             return $allowed;
         } else { ?>
             <script>
-                alert('Tunnistautuminen ei onnistunut. Varmista että käytät oikeaa linkkiä. Ongelmatilanteessa voit ottaa yhteyttä sähköpostitse tai puhelimitse.');
+                alert('Tunnistautuminen ei onnistunut. Varmista, että käytät oikeaa linkkiä. Ongelmatilanteessa voit ottaa yhteyttä sähköpostitse tai puhelimitse.');
             </script>
         <?php }
     } else { ?>
