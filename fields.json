@@ -1,0 +1,319 @@
+[
+    {
+        "key": "group_5f16c5f22af60",
+        "title": "CV",
+        "fields": [
+            {
+                "key": "field_5f16c5fa41a0d",
+                "label": "CV",
+                "name": "cv",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5f16c62041a0f",
+                        "label": "Kategoria",
+                        "name": "category",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "10",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5f1929d745cb6",
+                        "label": "Näkyvissä",
+                        "name": "visible",
+                        "type": "checkbox",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "10",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "dev": "Dev",
+                            "music": "Musiikki",
+                            "all": "kaikki"
+                        },
+                        "allow_custom": 0,
+                        "default_value": [],
+                        "layout": "vertical",
+                        "toggle": 0,
+                        "return_format": "value",
+                        "save_custom": 0
+                    },
+                    {
+                        "key": "field_5f16c67541a10",
+                        "label": "Kategorian sisältö",
+                        "name": "category-content",
+                        "type": "repeater",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "collapsed": "",
+                        "min": 0,
+                        "max": 0,
+                        "layout": "table",
+                        "button_label": "",
+                        "sub_fields": [
+                            {
+                                "key": "field_5f16c8b1c0afd",
+                                "label": "Otsikko",
+                                "name": "title",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "10",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5f21911e92daf",
+                                "label": "Alaotsikko",
+                                "name": "sub_title",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "10",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5f16c6b041a11",
+                                "label": "Kuvaus",
+                                "name": "description",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1,
+                                "delay": 0
+                            },
+                            {
+                                "key": "field_5f16c6f241a12",
+                                "label": "Näkyvissä",
+                                "name": "visible",
+                                "type": "checkbox",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "10",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "dev": "Dev",
+                                    "music": "Musiikki",
+                                    "all": "kaikki"
+                                },
+                                "allow_custom": 0,
+                                "default_value": [],
+                                "layout": "vertical",
+                                "toggle": 0,
+                                "return_format": "value",
+                                "save_custom": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "9"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5f19151e9a440",
+        "title": "Yritykset",
+        "fields": [
+            {
+                "key": "field_5f1915b8fc0cd",
+                "label": "Yritykset",
+                "name": "firms",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5f1915d1fc0ce",
+                        "label": "Nimi",
+                        "name": "name",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5f1915e1fc0cf",
+                        "label": "Avain",
+                        "name": "key",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5f1915f0fc0d0",
+                        "label": "Kategoria",
+                        "name": "category",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "dev": "Devaus",
+                            "music": "Musiikki"
+                        },
+                        "default_value": [],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 0,
+                        "return_format": "value",
+                        "ajax": 0,
+                        "placeholder": ""
+                    },
+                    {
+                        "key": "field_5f191687d82a0",
+                        "label": "Tietoja",
+                        "name": "tietoja",
+                        "type": "wysiwyg",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "acf-options-yritykset"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]
