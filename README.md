@@ -2,10 +2,10 @@
 
 This plugin creates a dynamic CV.
 
-Usage:
+**Usage:**
 - Install plugin
 - Create/import and populate required Custom Fields for your CV page. Field structure is in fields.json file.
 - Add [cidedot-cv] shortcode.
 
-Requirements:
+**Requirements:**
 - Advanced Custom Fields PRO
